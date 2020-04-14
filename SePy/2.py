@@ -2,13 +2,11 @@
 import colorama
 import sys
 from colorama import Fore, Back, Style
-#BvCk-2045-ztTS
 colorama.init()
 import webbrowser
 import subprocess
 #-------------------------------#
 on = True
-active = "none" # your access key
 #-------------------------------#
 #-----Settings-code-------------#
 #change it if you wnat to open links in w3m(It must be installed)
@@ -31,7 +29,7 @@ def pcheck():
 
 def settings():
 	print("1) Change webbrowser")
-	print("3) exit")
+	print("2) exit")
 	sett = input("<Settings_SePy: >_ ")
 	if sett == "1":
 		print("Changed to w3m")
@@ -81,31 +79,24 @@ while on == True:
 			settings()
 
 		if browser == "5":
-			if active == "BvCk-2045-ztTS":
-				print("What site? ")
-				site_d = input("SePy:>_")
+			print("What site? ")
+			site_d = input("SePy:>_")
 
-				try:
-					import requests	
-					r = requests.get("https://" + site_d)
-					file = open('SePy.html', 'w')
-					file.write(r.text)
-					file.close()
-				except:
-					import requests	
-					r = requests.get("http://" + site_d)
-					file = open('SePy.html', 'w')
-					file.write(r.text)
-					file.close()
-			else:
-				print(Back.RED + "Where is your money?")
-				print(Back.RED + "Where is your money?")
-				print(Back.RED + "Where is your money?")
-				print("You dont have access!")
-				print(Style.RESET_ALL)
+			try:
+				import requests	
+				r = requests.get("https://" + site_d)
+				file = open('SePy.html', 'w')
+				file.write(r.text)
+				file.close()
+			except:
+				import requests	
+				r = requests.get("http://" + site_d)
+				file = open('SePy.html', 'w')
+				file.write(r.text)
+				file.close()
+
 		if browser == "7":
-			if active == True:
-				print("Some error...Try to open 'parse.py' ")
+			print("Some error...Try to open 'parse.py' ")
 	if w3m == True:
 		print("What do you want to use? ")
 		print("1) Google")

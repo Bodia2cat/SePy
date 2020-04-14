@@ -9,7 +9,8 @@ echo -
 
 pip3 install colorama
 apt install w3m
-
+pip3 install lxml
+pip3 install bs4
 echo [+]Sucsessful
 
 clear

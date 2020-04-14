@@ -1,0 +1,7 @@
+a = input("")
+mylist = list(a)
+if mylist[1] == class 'str'
+:
+	print("e")
+else:
+	print("x")
